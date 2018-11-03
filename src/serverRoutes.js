@@ -1,7 +1,13 @@
-import renderer from './helpers/renderer';
+import serverRenderer from './helpers/serverRenderer';
+import createStore from './helpers/createStore';
 
 module.exports = router => {
     router.get('*', ctx => {
-        ctx.body = renderer(ctx);
+
+        const store = createStore();
+
+        // TO DO some logic to fetch data for response
+
+        ctx.body = serverRenderer(ctx, store);
     });
 }
