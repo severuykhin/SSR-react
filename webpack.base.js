@@ -7,9 +7,9 @@ module.exports = {
                 exclude: /node_modules/,
                 options: {
                     presets: [
+                        ['env', { targets: { browsers: ['last 2 versions'] }}],
                         'react',
-                        'stage-0',
-                        ['env', { targets: { browsers: ['last 2 versions'] }}]
+                        'stage-0'
                     ],
                     plugins: [
                         "transform-runtime"

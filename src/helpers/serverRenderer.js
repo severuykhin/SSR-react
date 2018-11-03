@@ -20,6 +20,9 @@ export default (requestContext, initialStore) => {
             <html>
                 <head></head>
                 <body>
+                    <script id="preloaded_state">
+                        window._PRELOADED_STATE_ = ${JSON.stringify(initialStore.getState())}
+                    </script>
                     <div id="root">${content}</div>
                     <script src="bundle.js"></script>
                 </body>
