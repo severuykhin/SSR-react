@@ -11,6 +11,10 @@ class UsersList extends Component {
         );
     }
 
+    componentDidMount() {
+        console.log('Some async action');
+    }
+
     render() {
 
         const { users } = this.props;
