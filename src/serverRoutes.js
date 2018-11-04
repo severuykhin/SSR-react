@@ -16,6 +16,7 @@ module.exports = router => {
     ctx.body = await getSitemap(ctx)
   })
 
+  // TO DO  - avoid double request ( favicon for example )
   router.get('*', async ctx => {
     try {
       // TO DO - INCAPSULATE THIS
@@ -26,5 +27,9 @@ module.exports = router => {
     } catch (e) {
       ctx.body = '500 server error'
     }
+  })
+
+  router.post('/send_order', async ctx => {
+    ctx.body = 'send order route';
   })
 }

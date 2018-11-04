@@ -17,7 +17,9 @@ export default (requestContext, initialStore) => {
   )
   return `
   <html>
-      <head></head>
+      <head>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+      </head>
       <body>
           <script id="preloaded_state">
               window._PRELOADED_STATE_ = ${serialize(initialStore.getState())}

@@ -1,10 +1,26 @@
 import React from 'react'
+import axios from 'axios'
 
-export default function Home() {
-  return (
-    <div>
+class Home extends React.Component {
+
+  sendOrder = () => {
+    axios.post('/send_order')
+      .then(response => {
+        alert(`API route example - response from route: ${response.data}`);
+      })
+  }
+
+  render() {
+    return (
+      <div>
         Home page sdfsdf dfg fff sdf
-        <button onClick={() => { console.log('Test'); }}> Click me</button>
-    </div>
-  )
+        <button
+          onClick={ this.sendOrder }>
+          Click me
+        </button>
+      </div>
+    )
+  }
 }
+
+export default Home;
