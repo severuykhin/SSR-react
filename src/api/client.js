@@ -1,11 +1,10 @@
-import axios from 'axios';
+import axios from 'axios'
 
 class ApiClientConstructor {
-
-    async getUsers () {
-        const response = await axios.get('http://react-ssr-api.herokuapp.com/users');
-        return response.data;
-    }
+  async getUsers () {
+    const response = await axios.get('http://react-ssr-api.herokuapp.com/users')
+    return response.data
+  }
 }
 
-export const ApiClient = new ApiClientConstructor();
+export default new ApiClientConstructor()
