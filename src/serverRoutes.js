@@ -25,6 +25,7 @@ module.exports = router => {
       store.dispatch(setUsers(users))
       ctx.body = serverRenderer(ctx, store)
     } catch (e) {
+      console.log(e);
       ctx.body = '500 server error'
     }
   })

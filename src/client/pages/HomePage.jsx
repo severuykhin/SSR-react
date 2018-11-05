@@ -17,13 +17,20 @@ class Home extends React.Component {
     const meta = {
       title : 'React Server Side rendering template'
     };
+
+    if (BROWSER) {
+      console.log('Do some browser stuff')
+    } else {
+      console.log('Do some server stuff')
+    }
     
     return (
+
       <div>
 
         <HelmetMeta meta={ meta } />
         
-        Home page sdfsdf dfg fff sdf
+        Home page example
         <button
           onClick={ this.sendOrder }>
           Click me
