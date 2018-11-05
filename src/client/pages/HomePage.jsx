@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import HelmetMeta from '../components/HelmetMeta/HelmetMeta.jsx'
+
 
 class Home extends React.Component {
 
@@ -11,8 +13,16 @@ class Home extends React.Component {
   }
 
   render() {
+
+    const meta = {
+      title : 'React Server Side rendering template'
+    };
+    
     return (
       <div>
+
+        <HelmetMeta meta={ meta } />
+        
         Home page sdfsdf dfg fff sdf
         <button
           onClick={ this.sendOrder }>

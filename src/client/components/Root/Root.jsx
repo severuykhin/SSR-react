@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import ClientRoutes from '../../ClientRoutes';
+import App from '../App/App.jsx'
+
 
 class Root extends Component {
   render() {
     return (
-        <ClientRoutes />
+      <App/>
     )
   }
 }
 
-export default Root;
+export default Root
